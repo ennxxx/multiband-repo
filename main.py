@@ -5,7 +5,7 @@ import implementation
 
 
 def read_image(path) -> np.ndarray:
-    data = imageio.imread(path)
+    data = imageio.v2.imread(path)
     return np.array(data) / 255
 
 
