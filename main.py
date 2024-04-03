@@ -32,9 +32,9 @@ if __name__ == "__main__":
     source = read_image("_sample_input_right.jpg")
     mask = read_mask("_sample_input_mask.jpg")
 
-    # blender = implementation.MultiBandBlending(num_levels=compute_num_levels(target))
-    # composite = blender(target, source, mask)
-    # write_image(composite, ".output_multiband.jpg")
+    blender = implementation.MultiBandBlending(num_levels=compute_num_levels(target))
+    composite = blender(target, source, mask)
+    write_image(composite, ".output_multiband.jpg")
 
     blender = implementation.NaiveBlending()
     composite = blender(target, source, mask)
